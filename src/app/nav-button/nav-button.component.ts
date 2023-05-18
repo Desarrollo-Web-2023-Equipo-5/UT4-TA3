@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class NavButtonComponent {
   @Input() name!: string;
-  selected: boolean;
+  @Input() selected: boolean;
 
   constructor() {
     this.selected = false;
