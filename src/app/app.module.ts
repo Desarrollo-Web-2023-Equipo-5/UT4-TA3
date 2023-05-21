@@ -9,6 +9,11 @@ import { DiscoverIndexComponent } from './discover-index/discover-index.componen
 import { DiscoverPostComponent } from './discover-post/discover-post.component';
 import { DiscoverFeedComponent } from './discover-feed/discover-feed.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { SearchComponent } from './pages/search/search.component';
+import { UploadComponent } from './pages/upload/upload.component';
+import { ChatComponent } from './pages/chat/chat.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { DiscoverComponent } from './pages/discover/discover.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { UserInfoComponent } from './user-info/user-info.component';
     DiscoverIndexComponent,
     DiscoverPostComponent,
     DiscoverFeedComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    SearchComponent,
+    UploadComponent,
+    ChatComponent,
+    ProfileComponent,
+    DiscoverComponent
   ],
   imports: [
     BrowserModule,
