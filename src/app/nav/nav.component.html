@@ -1,5 +1,13 @@
-<app-nav-button [name]="'Discover'" [selected]="true"></app-nav-button>
-<app-nav-button [name]="'Search'"[selected]="true"></app-nav-button>
-<app-nav-button [name]="'Upload Image'"[selected]="true"></app-nav-button>
-<app-nav-button [name]="'Chat'"[selected]="true"></app-nav-button>
-<app-nav-button [name]="'Profile'"[selected]="true"></app-nav-button>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link active" routerLink="discover">Discover</a>
+            <a class="nav-link" routerLink="search">Search</a>
+            <a class="nav-link" routerLink="upload">Upload Image</a>
+            <a class="nav-link" routerLink="chat">Chat</a>
+            <a class="nav-link" routerLink="profile">Profile</a>
+        </div>
+      </div>
+    </div>
+</nav>
