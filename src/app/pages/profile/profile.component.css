@@ -1,10 +1,9 @@
-.profile-data {
-    height: 10em;
+img {
+    height: 5em;
+    width: 5em;
 }
 
-.picture-container {
-    height: 7em;
-    width: 7em;
-    border-radius: 5em;
-    background-color: gray;
+.profile-picture {
+    width: 10em;
+    height: 10em;
 }

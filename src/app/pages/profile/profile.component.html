@@ -1,17 +1,24 @@
-<div class="row profile-data">
-    <div class="col d-flex align-items-center">
-        <div class="gap-2 d-flex align-items-center">
-            <div class="ms-2 picture-container">
+<div class="row p-5">
+    <div class="col d-flex gap-2">
 
+        <img [src]="user.profileImg" class="profile-picture rounded-circle object-fit-cover" alt="">
+
+        <div class="d-flex flex-column justify-content-center">
+            <h1>{{ user.name }}</h1>
+            <p>{{ user.location }}</p>
+            
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary">Follow {{ user.name }}</button>
+                <button class="btn btn-secondary">Message</button>
             </div>
-            <div>
-                <h1>Jane</h1>
-                <p>NY City</p>
-                <div class="buttons-container gap-2 d-flex justify-content-evenly">
-                    <button class="btn btn-primary">Follow Jane</button>
-                    <button class="btn btn-secondary">Message</button>
-                </div>
-            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col gap-2 d-flex flex-wrap justify-content-evenly">
+        <div *ngIf="!user.posts.length">No posts to display</div>
+        <div *ngFor="let post of user.posts">
+            <img [src]="post.imgUrl" class="card" style="width: 20em; height: auto;">
         </div>
     </div>
 </div>
