@@ -1,7 +1,7 @@
 <div class="row p-5">
     <div class="col d-flex gap-2">
 
-        <img [src]="user.profileImg" class="profile-picture rounded-circle object-fit-cover" alt="">
+        <img [src]="user.profilePhoto" class="profile-picture rounded-circle object-fit-cover" alt="">
 
         <div class="d-flex flex-column justify-content-center">
             <h1>{{ user.name }}</h1>
@@ -16,9 +16,9 @@
 </div>
 <div class="row">
     <div class="col gap-2 d-flex flex-wrap justify-content-evenly">
-        <div *ngIf="!user.posts.length">No posts to display</div>
-        <div *ngFor="let post of user.posts">
-            <img [src]="post.imgUrl" class="card" style="width: 20em; height: auto;">
+        <div *ngIf="!posts.length">No posts to display</div>
+        <div *ngFor="let post of posts">
+            <img [src]="post.photo" class="card" style="width: 20em; height: auto;">
         </div>
     </div>
 </div>
