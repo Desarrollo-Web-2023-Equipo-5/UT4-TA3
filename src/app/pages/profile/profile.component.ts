@@ -10,11 +10,12 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  
   user!: User;
-  posts!: Post[]
+  posts!: Post[];
+  isOverlayVisible = false;
+  overlayImageUrl!: string;
 
-  constructor( private userService: UserService, private imageService: ImagesService ) {}
+  constructor(private userService: UserService, private imageService: ImagesService) { }
 
   ngOnInit(): void {
     this.userService.getUser().subscribe({
@@ -25,5 +26,12 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  showOverlay(imageUrl: string) {
+    this.isOverlayVisible = true;
+    this.overlayImageUrl = imageUrl;
+  }
 
+  hideOverlay() {
+    this.isOverlayVisible = false;
+  }
 }

@@ -6,7 +6,7 @@
         <div class="d-flex flex-column justify-content-center">
             <h1>{{ user.name }}</h1>
             <p>{{ user.location }}</p>
-            
+
             <div class="d-flex gap-2">
                 <button class="btn btn-primary">Follow {{ user.name }}</button>
                 <button class="btn btn-secondary">Message</button>
@@ -18,7 +18,9 @@
     <div class="col gap-2 d-flex flex-wrap justify-content-evenly">
         <div *ngIf="!posts.length">No posts to display</div>
         <div *ngFor="let post of posts">
-            <img [src]="post.photo" class="card" style="width: 20em; height: auto;">
+            <img [src]="post.photo" class="card" style="width: 20em; height: auto;" (click)="showOverlay(post.photo)">
         </div>
     </div>
 </div>
+<app-image-overlay *ngIf="isOverlayVisible" [imageUrl]="overlayImageUrl"
+    (imageClicked)="hideOverlay()"></app-image-overlay>

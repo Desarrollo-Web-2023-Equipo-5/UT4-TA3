@@ -9,6 +9,7 @@ import { UploadComponent } from './pages/upload/upload.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DiscoverComponent } from './pages/discover/discover.component';
+import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DiscoverComponent } from './pages/discover/discover.component';
     UploadComponent,
     ChatComponent,
     ProfileComponent,
-    DiscoverComponent
+    DiscoverComponent,
+    ImageOverlayComponent
   ],
   imports: [
     BrowserModule,
