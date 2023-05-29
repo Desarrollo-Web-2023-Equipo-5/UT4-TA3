@@ -1,1 +1,41 @@
-<p>chat works!</p>
+<ng-container *ngIf="!chatSelected">
+    <h2 class="h5 text-center">Chats</h2>
+    <ng-container *ngIf="chats.length">
+        <ul class="list-group">
+            <li class="list-group-item d-flex gap-2"
+                *ngFor="let chat of chats"
+                (click)="openChat(chat)">
+                <img [src]="chat.participants[1].profilePhoto" alt="" class="rounded-circle bg-secondary">
+                <div class="d-flex flex-column justify-content-center">
+                    <p class="fw-bolder">{{ chat.participants[1].name }}</p>
+                    <p>{{ chat.messages[chat.messages.length - 1].content }}</p>
+                </div>
+            </li>
+        </ul>
+    </ng-container>
+    <ng-container>
+        <div class="no-chats d-flex justify-content-center align-items-center">
+            <p class="text-center">No chats to display</p>
+        </div>
+    </ng-container>
+</ng-container>
+<ng-container *ngIf="chatSelected" class="current-chat">
+    <div class="d-flex align-items-center">
+        <div class="p-1" (click)="chatSelected = null">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+        </div>
+        <h2 class="h5 text-center">{{ chatSelected.participants[1].name }}</h2>
+    </div>
+    <ul class="list-group">
+        <li class="pe-none list-group-item d-flex gap-2"
+            [ngClass]="message.sender.username === '@Jane' ? 'justify-content-end' : 'justify-content-start'"
+            *ngFor="let message of chatSelected.messages">
+            <div class="d-flex gap-1 align-items-center" [ngClass]="message.sender.username === '@Jane' ? 'flex-row-reverse' : 'flex-row'" >
+                <img [src]="message.sender.profilePhoto" alt="" class="chat rounded-circle bg-secondary">
+                <p>{{ message.content }}</p>
+            </div>
+        </li>
+    </ul>
+</ng-container>

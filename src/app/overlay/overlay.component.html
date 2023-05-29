@@ -1,0 +1,9 @@
+<div class="overlay bg-white position-fixed bottom-0 end-0 border border-1 border-black rounded shadow-lg z-3">
+    <div class="overlay-bar d-flex justify-content-end w-100 p-1">
+        <button class="btn-close" (click)="closeOverlay.emit()"></button>
+    </div>
+    <div class="overlay-content w-100">
+        <app-chat *ngIf="currentOverlay === 'chat'"></app-chat>
+        <app-upload *ngIf="currentOverlay === 'upload'"></app-upload>
+    </div>
+</div>

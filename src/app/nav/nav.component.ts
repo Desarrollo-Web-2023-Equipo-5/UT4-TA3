@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  isOverlayOpen: boolean = false;
+  currentOverlay: 'chat' | 'upload' | '' = '';
+
+  openOverlay(overlay: 'chat' | 'upload'): void {
+    this.isOverlayOpen = true;
+    this.currentOverlay = overlay;
+  }
 }
