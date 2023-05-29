@@ -4,3 +4,13 @@
         <input type="text" placeholder="Search all photos">
     </form>
 </section>
+<section class="posts">
+    <div class="row">
+        <div class="col gap-2 d-flex flex-wrap justify-content-evenly">
+            <div *ngIf="!postList.length">No posts to display</div>
+            <div *ngFor="let post of postList">
+                <img [src]="post.photo" class="card" style="width: 20em; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>

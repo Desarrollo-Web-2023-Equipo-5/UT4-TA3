@@ -68,7 +68,10 @@ export class ImagesService {
       tag: '',
       uploader: '@Jane',
     },
-  ]
+  ];
+  getAllPosts(): Post[] {
+    return this.POSTS;
+  }
 
   constructor() { }
 
