@@ -1,0 +1,38 @@
+img {
+    width: 4em;
+    height: 4em;
+}
+
+img.chat {
+    width: 2em;
+    height: 2em;
+}
+
+ul, .current-chat {
+    max-height: 27em;
+    overflow-y: auto;
+}
+
+.no-chats {
+    height: 27em;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+div svg {
+    cursor: pointer;
+}
+
+.arrow {
+    justify-self: start;
+}
+
+.username {
+    justify-self: center;
+}
