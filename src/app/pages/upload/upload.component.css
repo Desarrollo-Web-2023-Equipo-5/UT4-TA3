@@ -1,0 +1,49 @@
+.upload-button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20em;
+    height: 4em;
+    border-radius: 0.5em;
+  }
+  
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    padding-left: 0%;
+  }
+  
+  .container input,
+  .container textarea {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  
+  .container textarea {
+    height: 30em;
+    width: 20em;
+    resize: none;
+    box-sizing: border-box;
+    border: solid black;
+  }
+  
+  
+
+  .custom-file-input {
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .custom-file-input input[type="file"] {
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  
+  
