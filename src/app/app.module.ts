@@ -12,7 +12,6 @@ import { DiscoverComponent } from './pages/discover/discover.component';
 import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
 import { OverlayComponent } from './overlay/overlay.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

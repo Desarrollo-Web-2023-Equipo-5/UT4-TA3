@@ -9,44 +9,7 @@ import { ChatService } from 'src/app/services/chat.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent {
-  chats: any[] = [
-    {
-      name: 'Pepito',
-      lastChat: 'Hola todo bien?'
-    },
-    {
-      name: 'Juancito',
-      lastChat: 'Holaaa???'
-    },
-    {
-      name: 'Maria',
-      lastChat: 'Que haces perdido? :)'
-    },
-    {
-      name: 'Pepito',
-      lastChat: 'Hola todo bien?'
-    },
-    {
-      name: 'Juancito',
-      lastChat: 'Holaaa???'
-    },
-    {
-      name: 'Maria',
-      lastChat: 'Que haces perdido? :)'
-    },
-    {
-      name: 'Pepito',
-      lastChat: 'Hola todo bien?'
-    },
-    {
-      name: 'Juancito',
-      lastChat: 'Holaaa???'
-    },
-    {
-      name: 'Maria',
-      lastChat: 'Que haces perdido? :)'
-    },
-  ] 
+  chats: any[] = [] 
 
   chatSelected: Chat | null = null;
 
