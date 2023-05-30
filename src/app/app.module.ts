@@ -11,6 +11,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { DiscoverComponent } from './pages/discover/discover.component';
 import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

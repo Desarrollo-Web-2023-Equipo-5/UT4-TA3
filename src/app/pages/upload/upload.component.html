@@ -1,1 +1,11 @@
-<p>upload works!</p>
+<h1>Upload image</h1>
+
+<button class="upload-button" for="file-input">
+    Select file
+    <input type="file" id="file-input" (change)="onFileSelected($event)">
+</button>
+  
+<div class="container">
+    <textarea placeholder="Type description..."></textarea>
+</div>
+<button class="upload-button" (click)="onUpload()">Upload</button>
