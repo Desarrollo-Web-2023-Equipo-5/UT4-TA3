@@ -1,0 +1,10 @@
+<div class="d-flex">
+    <img [src]="post.photo" alt="Slide Image" class="slide-image" />
+<div class="list-group-item d-flex gap-2">
+    <img [src]="user?.profilePhoto" alt="" class="rounded-circle bg-secondary">
+    <div class="d-flex flex-column justify-content-center">
+        <p class="fw-bolder">{{ user?.name }} {{ user?.surname }}</p>
+        <p>{{ post.uploader }}</p>
+    </div>
+</div>
+</div>

@@ -12,7 +12,11 @@ export class SearchComponent {
   postList: Post[] = []; 
   imageService: ImagesService = inject(ImagesService);
 
-  constructor(){
-  this.postList = this.imageService.getAllPosts()
+  constructor(private imgService: ImagesService) { 
+    this.imageService.getAllPosts().subscribe( {
+      next: (posts) => {
+        this.postList = posts;
+      }
+    });
 }
 }

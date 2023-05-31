@@ -10,9 +10,17 @@ export class UserService {
 
   USERS: User[] = USERS
 
-  constructor() { }
+
+
+  getAllUsers(): Observable<User[]> {
+    return of(this.USERS)
+  }
 
   getUser(): Observable<User> {
     return of(this.USERS[0])
+  }
+
+  getUserByUsername(username: string): Observable<User | undefined> {
+    return of(this.USERS.find(user => user.username === username))
   }
 }
