@@ -8,7 +8,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'discover',
     component: DiscoverComponent
   },
   {
@@ -16,20 +16,12 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: 'upload',
-    component: UploadComponent
-  },
-  {
-    path: 'chat',
-    component: ChatComponent
-  },
-  {
     path: 'profile',
     component: ProfileComponent
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'discover'
   }
 ];
 
