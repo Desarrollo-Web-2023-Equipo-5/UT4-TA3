@@ -3,7 +3,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    width: 20em;
+    width: 22em;
     height: 4em;
     border-radius: 0.5em;
   }
@@ -23,8 +23,8 @@
   }
   
   .container textarea {
-    height: 30em;
-    width: 20em;
+    height: 16.5em;
+    width: 22em;
     resize: none;
     box-sizing: border-box;
     border: solid black;
