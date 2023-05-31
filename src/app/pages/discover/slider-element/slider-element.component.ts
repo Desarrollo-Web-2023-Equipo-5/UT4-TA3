@@ -13,6 +13,10 @@ export class SliderElementComponent {
 user!: User | undefined;
 
 constructor(private userService : UserService) {
+
+ }
+
+ ngOnInit() {
   this.userService.getUserByUsername(this.post.uploader)
   .subscribe(user => this.user = user);
  }
