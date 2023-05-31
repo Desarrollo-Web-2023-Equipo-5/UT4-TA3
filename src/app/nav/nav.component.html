@@ -11,6 +11,6 @@
 </nav>
 <app-overlay 
   *ngIf="isOverlayOpen" 
-  (closeOverlay)="isOverlayOpen = false"
+  (closeOverlay)="closeOverlay()"
   [currentOverlay]="currentOverlay"
   ></app-overlay>

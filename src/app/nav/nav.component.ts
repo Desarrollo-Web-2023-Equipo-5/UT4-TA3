@@ -11,7 +11,17 @@ export class NavComponent {
   currentOverlay: 'chat' | 'upload' | '' = '';
 
   openOverlay(overlay: 'chat' | 'upload'): void {
+    if (this.isOverlayOpen && this.currentOverlay === overlay) {
+      this.closeOverlay()
+      return;
+    };
+
     this.isOverlayOpen = true;
     this.currentOverlay = overlay;
+  }
+
+  closeOverlay(): void {
+    this.isOverlayOpen = false
+    this.currentOverlay = '';
   }
 }
