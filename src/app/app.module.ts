@@ -36,8 +36,6 @@ import { SliderElementComponent } from './pages/discover/slider-element/slider-e
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SlickCarouselModule,
-    HammerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
